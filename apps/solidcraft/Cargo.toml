@@ -1,11 +1,11 @@
 [package]
-name = "solidcraft"
-description = "SolidCraft desktop app"
+name = "my_fusion"
+description = "MY Fusion desktop app"
 version.workspace = true
 edition.workspace = true
 license.workspace = true
 publish = false
-default-run = "solidcraft"
+default-run = "my_fusion"
 
 # The workspace lints, except unsafe_code: denied, not forbidden, so that src/open_documents.rs
 # (macOS file-open events), src/native_crash.rs (Windows exception filter) and src/native_frame.rs
