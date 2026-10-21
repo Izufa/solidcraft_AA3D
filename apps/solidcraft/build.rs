@@ -12,9 +12,9 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let copy = out.join("solidcraft.ico");
     std::fs::copy(icon, &copy)?;
     let rc = out.join("solidcraft.rc");
-    let icon_line = format!("1 ICON \"{}\"\n", copy.display().to_string().replace('\\', "/"));
-    std::fs::write(&rc, format!("{icon_line}{}", version_resource(&std::env::var("CARGO_PKG_VERSION")?)))?;
-    embed_resource::compile_for(&rc, ["solidcraft"], embed_resource::NONE).manifest_required()?;
+    std::fs::write(&rc, format!("1 ICON \"{}\"\n", copy.display().to_string().replace('\\', "/")))?;
+    let pkg_name = std::env::var("CARGO_PKG_NAME")?;
+    embed_resource::compile_for(&rc, [pkg_name.as_str()], embed_resource::NONE).manifest_required()?;
     Ok(())
 }
 

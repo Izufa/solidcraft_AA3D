@@ -18,6 +18,7 @@
 #![deny(unsafe_code)]
 
 #[cfg(not(target_os = "macos"))]
+#[allow(dead_code)]
 #[path = "../../../assets/icons/app/shared/source/app_icon.rs"]
 mod app_icon;
 mod come_forward;
@@ -851,10 +852,16 @@ fn app_viewport(custom_titlebar: bool) -> Result<egui::ViewportBuilder, eframe::
     #[cfg(target_os = "macos")]
     let icon = egui::IconData::default();
     #[cfg(not(target_os = "macos"))]
-    let icon =
-        egui::IconData { rgba: app_icon::rgba(64).map_err(|e| eframe::Error::AppCreation(std::io::Error::other(e).into()))?, width: 64, height: 64 };
+    // let icon =
+    //     egui::IconData { rgba: app_icon::rgba(64).map_err(|e| eframe::Error::AppCreation(std::io::Error::other(e).into()))?, width: 64, height: 64 };
+    let icon = egui::IconData {
+    rgba: include_bytes!("icon.rgba").to_vec(),
+    width: 64,
+    height: 64,
+    };
+
     Ok(egui::ViewportBuilder::default()
-        .with_title("SolidCraft")
+        .with_title("MY Fusion") //change the title here to my custom name
         .with_icon(icon)
         .with_inner_size([1600.0, 1000.0])
         .with_min_inner_size([960.0, 600.0])

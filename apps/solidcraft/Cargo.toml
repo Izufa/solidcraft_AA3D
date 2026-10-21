@@ -1,11 +1,11 @@
 [package]
-name = "solidcraft"
-description = "SolidCraft desktop app"
+name = "my_fusion"
+description = "MY Fusion desktop app"
 version.workspace = true
 edition.workspace = true
 license.workspace = true
 publish = false
-default-run = "solidcraft"
+default-run = "my_fusion"
 
 [features]
 default = ["raytrace-cpu", "bundled-render-library"]

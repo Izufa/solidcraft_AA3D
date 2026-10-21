@@ -2524,6 +2524,37 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "743fb55ba31b18fb1ecef6bdc9aa2743314978ac084044301a7eee33fb99a20d"
 
 [[package]]
+name = "my_fusion"
+version = "0.18.2"
+dependencies = [
+ "block2 0.6.2",
+ "eframe",
+ "egui",
+ "embed-resource",
+ "getrandom 0.3.4",
+ "hidapi",
+ "keyring",
+ "log",
+ "objc2 0.6.5",
+ "objc2-app-kit 0.3.2",
+ "objc2-foundation 0.3.2",
+ "pollster 0.4.0",
+ "quick-xml",
+ "raw-window-handle",
+ "rfd",
+ "ron",
+ "rustls",
+ "serde_json",
+ "solidcraft-3dx-client",
+ "solidcraft-engine",
+ "solidcraft-space-mouse",
+ "solidcraft-ui-egui",
+ "ureq",
+ "windows-sys 0.61.2",
+ "winit",
+]
+
+[[package]]
 name = "naga"
 version = "30.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
