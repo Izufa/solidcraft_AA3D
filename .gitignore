@@ -10,3 +10,4 @@ __pycache__/
 
 # cargo-mutants output (docs/mutation-testing.md)
 mutants.out*/
+WEB_DEPLOYMENT_GUIDE.txt

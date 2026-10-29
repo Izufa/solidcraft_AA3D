@@ -464,7 +464,7 @@ pub fn show(app: &mut SolveApp, ui: &mut egui::Ui) {
     egui::CentralPanel::default().frame(egui::Frame::NONE.fill(t.panel).inner_margin(egui::Margin::symmetric(36, 24))).show(ui, |ui| {
         egui::ScrollArea::vertical().auto_shrink([false, false]).show(ui, |ui| {
             ui.horizontal(|ui| {
-                ui.label(RichText::new("MY Fusion").size(crate::theme::Tokens::get().font_display).semibold().color(t.text));
+                ui.label(RichText::new("AXYZ CAD").size(crate::theme::Tokens::get().font_display).semibold().color(t.text));
                 ui.add_space(t.space_12);
                 ui.label(RichText::new(crate::i18n::tr_label("Start")).size(crate::theme::Tokens::get().font_intro).color(t.text_dim));
             });
