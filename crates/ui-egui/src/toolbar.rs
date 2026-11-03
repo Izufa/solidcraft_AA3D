@@ -318,13 +318,25 @@ pub fn app_bar(app: &mut SolveApp, ui: &mut egui::Ui) {
         // (viewBox 357 x 412). Same 20 px height and centre as the old block.
         {
             let c = pos2(left + 20.0, r.center().y);
-            crate::icons::glyphs::brand_mark(ui.painter(), c);
+            let icon_rect = Rect::from_center_size(pos2(left + 20.0, r.center().y), vec2(20.0, 20.0));
+            static ICON_BYTES: &[u8] = include_bytes!("icon.rgba");
+            let texture = ui.ctx().load_texture(
+                "brand_icon",
+                egui::ColorImage::from_rgba_unmultiplied([64, 64], ICON_BYTES),
+                egui::TextureOptions::LINEAR,
+            );
+            ui.painter().image(
+                texture.id(),
+                icon_rect,
+                Rect::from_min_max(pos2(0.0, 0.0), pos2(1.0, 1.0)),
+                Color32::WHITE,
+            );
         }
         if !compact_actions {
             ui.painter().text(
                 pos2(left + 36.0, r.center().y),
                 Align2::LEFT_CENTER,
-                "SolidCraft",
+                "AXYZ CAD",
                 crate::fonts::semibold(t.font_heading),
                 t.app_bar_text,
             );

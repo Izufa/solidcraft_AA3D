@@ -131,7 +131,7 @@ pub fn show(app: &mut SolveApp, ctx: &egui::Context, anchor: egui::Pos2) {
                 crate::context_menu::menu_frame(ui, |ui| {
                     for (id, label, icon) in [
                         ("docs", "Documentation", "library"),
-                        ("about", "About SolidCraft", "help"),
+                        ("about", "About AXYZ CAD", "help"),
                         ("updates", crate::i18n::tr("update.check_for_updates"), "update"),
                         ("shortcuts", "Keyboard Shortcuts", "list"),
                         ("messages", "Messages…", "list"),
@@ -170,7 +170,7 @@ fn about(app: &mut SolveApp, ctx: &egui::Context) {
     if !app.help.about {
         return;
     }
-    let (closed, action) = ui_kit::Window::new(egui::Id::new("sc_about"), "help", crate::i18n::tr_label("About SolidCraft"))
+    let (closed, action) = ui_kit::Window::new(egui::Id::new("sc_about"), "help", crate::i18n::tr_label("About AXYZ CAD"))
         .cards(2.0)
         .actions("", "Close", None)
         .show(ctx, true, |ui| {

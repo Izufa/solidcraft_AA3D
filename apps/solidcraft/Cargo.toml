@@ -1,11 +1,11 @@
 [package]
-name = "my_fusion"
-description = "MY Fusion desktop app"
+name = "axyz_cad"
+description = "AXYZ CAD desktop app"
 version.workspace = true
 edition.workspace = true
 license.workspace = true
 publish = false
-default-run = "my_fusion"
+default-run = "axyz_cad"
 
 [features]
 default = ["raytrace-cpu", "bundled-render-library"]

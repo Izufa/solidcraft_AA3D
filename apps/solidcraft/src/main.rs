@@ -861,7 +861,7 @@ fn app_viewport(custom_titlebar: bool) -> Result<egui::ViewportBuilder, eframe::
     };
 
     Ok(egui::ViewportBuilder::default()
-        .with_title("MY Fusion") //change the title here to my custom name
+        .with_title("AXYZ CAD") //change the title here to my custom name
         .with_icon(icon)
         .with_inner_size([1600.0, 1000.0])
         .with_min_inner_size([960.0, 600.0])
