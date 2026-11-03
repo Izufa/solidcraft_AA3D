@@ -816,7 +816,7 @@ mod icon_tests {
         let viewport = super::app_viewport().expect("viewport");
         let icon = viewport.icon.expect("running window must have an icon");
         assert_eq!((icon.width, icon.height), (64, 64));
-        assert_eq!(icon.rgba, super::app_icon::rgba(64).expect("original mark"));
+        assert_eq!(icon.rgba, include_bytes!("icon.rgba"));
         assert_eq!(viewport.app_id.as_deref(), Some(super::APP_ID));
     }
 }
