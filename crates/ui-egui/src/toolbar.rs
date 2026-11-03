@@ -317,7 +317,7 @@ pub fn app_bar(app: &mut SolveApp, ui: &mut egui::Ui) {
         // Brand mark: the SolidCraft logo, drawn in code from the SVG's own coordinates
         // (viewBox 357 x 412). Same 20 px height and centre as the old block.
         {
-            let c = pos2(left + 20.0, r.center().y);
+
             let icon_rect = Rect::from_center_size(pos2(left + 20.0, r.center().y), vec2(20.0, 20.0));
             static ICON_BYTES: &[u8] = include_bytes!("icon.rgba");
             let texture = ui.ctx().load_texture(
